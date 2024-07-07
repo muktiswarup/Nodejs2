@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+  <style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.products-list {
+    padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.product-item {
+  width: calc(33% - 20px); /* Account for margin between items  */
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.product-details h3 {
+  margin-bottom: 10px;
+}
+
+.product-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-details li {
+  margin-bottom: 5px;
+}
+
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-info p {
+  margin-bottom: 5px;
+}
+
+.price,
+.color {
+  font-weight: bold;
+}
+
+.btn-secondary {
+  /* Style your secondary button here */
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="products-list">
+    <div class="product-item">
+      <div class="product-image">
+        <img src={{%IMAGE%}} alt="Product Image" height="120" width="120">
+      </div>
+      <div class="product-details">
+        <h3>{{ NAME }}</h3>
+        <ul>
+          <li><span>Model Name:</span> {{ MODELNAME }}</li>
+          <li><span>Model Number:</span> {{ MODELNO }}</li>
+          <li><span>Size:</span> {{ SIZE }}</li>
+          <li><span>Camera:</span> {{ CAMERA }}</li>
+        </ul>
+      </div>
+      <div class="product-info">
+        <p class="price">Price: ${{ PRICE }}</p>
+        <p class="color">Color: {{ COLOR }}</p>
+        <a href="/products?id={{ ID }}" class="btn btn-secondary">Show Details</a>
+      </div>
+    </div>
+    </div>
+
+  </body>
+</html>
