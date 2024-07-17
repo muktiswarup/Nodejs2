@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "movie_name": "96",
+    "rating": "8.1",
+    "duration": "2hr",
+    "language": "tamil,Hindi"
+  },
+  {
+    "id": "2",
+    "movie_name": "Tumbad",
+    "rating": "8.9",
+    "duration": "2hr 20min",
+    "language": "tamil,Hindi"
+  },
+  {
+    "id": "3",
+    "movie_name": "I",
+    "rating": "8",
+    "duration": "2hr",
+    "language": "Hindi"
+  },
+  {
+    "id": "4",
+    "movie_name": "Avatar",
+    "rating": "8.1",
+    "duration": "2hr",
+    "language": "English"
+  },
+  {
+    "id": "5",
+    "movie_name": "KGF",
+    "rating": "8",
+    "duration": "2hr",
+    "language": "Kannada"
+  },
+  {
+    "id": "6",
+    "movie_name": "Lgan",
+    "rating": "9",
+    "duration": "2hr12",
+    "language": "Hindi"
+  },
+  {
+    "id": "61",
+    "movie_name": "3idiot",
+    "rating": "9",
+    "duration": "2hr12",
+    "language": "Hindi"
+  }
+]
