@@ -1,0 +1,34 @@
+[
+       {
+        "movie_id": "01",
+        "movie_name":"96",
+        "rating": "8.1",
+        "duration": "2hr",
+        "language": "tamil,Hindi"
+
+       },
+       {
+        "movie_id": "02",
+        "movie_name":"Tumbad",
+        "rating": "8.9",
+        "duration": "2hr 20min",
+        "language": "tamil,Hindi"
+
+       },
+       {
+        "movie_id": "3",
+        "movie_name":"I",
+        "rating": "8",
+        "duration": "2hr",
+        "language": "Hindi"
+
+       },
+       {
+        "movie_id": "04",
+        "movie_name":"Avatar",
+        "rating": "8.1",
+        "duration": "2hr",
+        "language": "English"
+
+       }
+]
