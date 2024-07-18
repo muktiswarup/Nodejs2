@@ -17,7 +17,7 @@ app.get("/api/movies",(req,res)=>{
 
 app.post("/api/movies",(req,res)=>{
     // console.log(req.body);
-    const newId=movies[movies.length-1].id+1;
+    const newId=movies[movies.length-1].id+1;//req.body will provide an object after post request
     const newMovie=Object.assign({id: newId},req.body) //create new object by merging two object.
     movies.push(newMovie);
     fs.writeFile('./data/movies.json',JSON.stringify(movies),(err)=>{
