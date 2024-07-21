@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const morgan= require('morgan');
 // Read the movies data from the JSON file
 let movies = JSON.parse(fs.readFileSync("./data/movies.json", "utf-8"));
 
@@ -9,6 +10,7 @@ const logger= (req,res,next)=>{
         next();
 }
 app.use(express.json());
+app.use(morgan('dev'));
 app.use(logger)
 app.use((req,res,next)=>{
     req.requestedAt=new Date().toString()
@@ -117,7 +119,7 @@ const deleteMovie = (req, res) => {
   });
 };
 
-// GET endpoint to fetch all movies
+/* // GET endpoint to fetch all movies
 app.get("/api/movies", getAllMovies);
 
 // GET endpoint to fetch a movie by ID
@@ -130,8 +132,20 @@ app.post("/api/movies", createMovie);
 app.patch("/api/movies/:id", updateMovie);
 
 //DELETE end point to delete a movie
-app.delete("/api/movies/:id", deleteMovie);
+app.delete("/api/movies/:id", deleteMovie); */
 
+const moviesRouter= express.Router();
+
+moviesRouter.route("/")
+  .get(getAllMovies)
+  .post(createMovie)
+
+moviesRouter.route("/:id")
+  .get(getMovieThroughId)
+  .patch(updateMovie)
+  .delete(deleteMovie)
+
+app.use('/api/movies',moviesRouter)
 // Start the server
 const PORT = 8000;
 app.listen(PORT, () => {
